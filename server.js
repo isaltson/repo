@@ -12,7 +12,7 @@ app.post('/validate', async (req, res) => {
 
   // Validate reCAPTCHA
   try {
-    const reCAPTCHA_URL = `https://www.google.com/recaptcha/api/siteverify?secret=YOUR_SECRET_KEY&response=${captchaResponse}`;
+    const reCAPTCHA_URL = `https://www.google.com/recaptcha/api/siteverify?secret=6Le5mvkqAAAAAE4zkFx-i17rB9a6eEVoYxkBOQe3&response=${captchaResponse}`;
     const reCAPTCHA_Response = await axios.post(reCAPTCHA_URL);
 
     if (!reCAPTCHA_Response.data.success) {
